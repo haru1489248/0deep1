@@ -17,6 +17,9 @@ def sigmoid_grad(x):
 def relu(x: np.ndarray) -> np.ndarray:
     return np.maximum(0, x)
 
+def tanh(x):
+    return np.tanh(x)
+
 def softmax(x: np.ndarray) -> np.ndarray:
     x = x - np.max(x, axis=-1, keepdims=True) # オーバーフロー対策
     return np.exp(x) / np.sum(np.exp(x), axis=-1, keepdims=True)
